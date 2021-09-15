@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body>
+  <div id="app">
+    <canvas id="canvas" style="border:1px solid blue;" width="500" height="500"></canvas>
+  </div>
+
+  <div id="picker"></div>
+
+  <!--  ************** Fragment Shader ************* -->
+  <script id="shader-fs" type="x-shader/x-fragment">
+    precision mediump float;
+    varying vec4 vColor; 
+  
+    void main(void) {
+      gl_FragColor = vec4(1,1,0,1); 
+    }
+  </script>
+
+  <!--  ************** Vertex Shader ************* -->
+  <script id="shader-vs" type="x-shader/x-vertex">
+    attribute vec3 aVertexPosition;
+
+    uniform mat4 uMVMatrix;
+
+    void main(void) {
+
+      gl_Position = vec4(aVertexPosition, 1.0);
+
+    }
+  </script>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
