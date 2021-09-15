@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.17e50649.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite App</title>
 
@@ -17,7 +17,13 @@
       margin-top: 60px;
     }
   </style>
-</head>
+  <script type="module" crossorigin src="/index.js"></script>
+    <link rel="modulepreload" href="/src/main.js">
+    <link rel="modulepreload" href="/node_modules/@jaames/iro/dist/iro.es.js">
+    <link rel="modulepreload" href="/src/shader.js">
+    <link rel="modulepreload" href="/src/shaders/lab1-fragment.js">
+    <link rel="modulepreload" href="/src/shaders/lab1-vertex.js">
+  </head>
 
 <body>
   <div id="app">
@@ -26,7 +32,7 @@
 
   <div id="picker"></div>
 
-  <script type="module" src="/src/main.ts"></script>
+  
 </body>
 
 </html>

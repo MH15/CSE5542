@@ -5,28 +5,23 @@ export default defineConfig({
     build: {
         minify: false,
         brotliSize: false,
+        target: "es6",
+        polyfillModulePreload: false,
         rollupOptions: {
             output: {
+
                 preserveModules: true,
-                dir: 'dist',
                 // format: 'es',
-                // chunkFileNames: '[name].js'
+                entryFileNames: `[name].js`,
+                // chunkFileNames: `assets/[name].js`,
+                // assetFileNames: `assets/[name].[ext]`,
+                manualChunks: undefined
             },
-            // manualChunks: id => path.parse(id).name,
-            // preserveEntrySignatures: "exports-only"
+
+            preserveEntrySignatures: "exports-only"
         }
     },
     esbuild: {
         minify: false
     },
-
-    // rollupOptions: {
-
-    //     output: {
-    //         entryFileNames: `assets/[name].js`,
-    //         chunkFileNames: `assets/[name].js`,
-    //         assetFileNames: `assets/[name].[ext]`,
-    //         preserveModules: true
-    //     }
-    // }
 })

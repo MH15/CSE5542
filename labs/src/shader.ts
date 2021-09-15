@@ -1,5 +1,5 @@
 
-
+// Add an attribute
 export function attribute(gl: WebGLRenderingContext, program: WebGLProgram, name: string) {
     let attrib = gl.getAttribLocation(program, name);
     gl.enableVertexAttribArray(attrib);
@@ -9,6 +9,7 @@ export function attribute(gl: WebGLRenderingContext, program: WebGLProgram, name
     return attrib
 }
 
+//! Add a uniform
 export function uniform(gl: WebGLRenderingContext, program: WebGLProgram, name: string) {
     let attrib = gl.getUniformLocation(program, name);
     if (attrib < 0) {
@@ -63,4 +64,14 @@ export function createProgram(gl: WebGLRenderingContext, vertexShader: WebGLShad
 
     gl.useProgram(program);
     return program
+}
+
+function randi(min: number, max: number) {
+    min = Math.ceil(min)
+    max = Math.floor(max)
+    return Math.floor(Math.random() * (max - min) + min)
+}
+
+export function r(max: number) {
+    return randi(-max, max) / max
 }
