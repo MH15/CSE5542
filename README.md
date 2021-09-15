@@ -28,3 +28,10 @@ npm run dev
 **Both versions should function identically in most browsers.**
 
 Contact me at `hall.2586@osu.edu` if you have any issues running this.
+
+
+## Usage
+
+Press one of the following five keys at any time, <kbd>p</kbd>, <kbd>h</kbd>, <kbd>v</kbd>, <kbd>t</kbd>, <kbd>q</kbd> to indicate the shape (point, horizontal line, vertical line, triangle, square) to draw. Press <kbd>c</kbd> to clear the display.
+
+Drag the color wheel in the bottom left to choose what color each shape is drawn as.
